@@ -19,9 +19,13 @@
         <nz-option nzValue="Select status" nzLabel="Select Status"></nz-option>
         <nz-option nzValue="Select status2" nzLabel="Select Status"></nz-option>
       </nz-select>
-      <div class="date-picker">
+      <div class="date-picker" (click)="toggleDatePicker()">
         <img src="/assets/Calendar.svg" alt="" />
         {{ date | date : "dd/MM/yyyy" }}
+        <nz-date-picker
+          [(ngModel)]="date"
+          (ngModelChange)="onChange($event)"
+        ></nz-date-picker>
       </div>
     </div>
     <div>
