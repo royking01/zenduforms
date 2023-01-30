@@ -8,7 +8,7 @@ import { takeWhile } from 'rxjs';
   styleUrls: ['./others.component.scss'],
 })
 export class OthersComponent implements OnDestroy {
-  id: string = '';
+  id = '';
   componentActive = true;
   constructor(private route: ActivatedRoute) {
     this.route.params
