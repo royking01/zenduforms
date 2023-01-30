@@ -1,0 +1,82 @@
+<ul nz-menu nzMode="horizontal">
+  <div class="nav">
+    <div>
+      <li nz-menu-item [nzSelected]="this.isSelected('/home')">
+        <a [routerLink]="['home']" routerLinkActive="active" routerLink="home">
+          <h1><b> ZenduForms </b></h1>
+        </a>
+      </li>
+    </div>
+    <div class="nav-list">
+      <li nz-menu-item [nzSelected]="this.isSelected('/home/forms')">
+        <a
+          [routerLink]="['/home/forms']"
+          routerLinkActive="active"
+          routerLink="/home/forms"
+        >
+          <span class="material-symbols-outlined"> format_list_bulleted </span
+          >Forms
+        </a>
+      </li>
+      <li nz-menu-item [nzSelected]="this.isSelected('/home/customers')">
+        <a
+          [routerLink]="['/home/customers']"
+          routerLinkActive="active"
+          routerLink="/home/customers"
+        >
+          <span class="material-symbols-outlined"> group </span>
+          Customers
+        </a>
+      </li>
+
+      <li nz-menu-item [nzSelected]="this.isSelected('/home/submissions')">
+        <a
+          [routerLink]="['/home/submissions']"
+          routerLinkActive="active"
+          routerLink="/home/submissions"
+        >
+          <span class="material-symbols-outlined"> graphic_eq </span>
+          Submissions
+        </a>
+      </li>
+      <li nz-menu-item [nzSelected]="">
+        <a
+          [routerLink]="['/home/history']"
+          routerLinkActive="active"
+          routerLink="/home/history"
+        >
+          <span class="material-symbols-outlined"> history </span> History
+        </a>
+      </li>
+      <li nz-menu-item [nzSelected]="this.isSelected('/home/reports')">
+        <a
+          [routerLink]="['/home/reports']"
+          routerLinkActive="active"
+          routerLink="/home/reports"
+        >
+          <span class="material-symbols-outlined"> insert_chart </span>
+          Reports
+        </a>
+      </li>
+
+      <li nz-menu-item [nzSelected]="this.isSelected('/home/workflow')">
+        <a
+          [routerLink]="['/home/workflow']"
+          routerLinkActive="active"
+          routerLink="/home/workflow"
+        >
+          <span class="material-symbols-outlined"> insert_chart </span>
+          Workflow
+        </a>
+      </li>
+    </div>
+    <div>
+      <li nz-menu-item>
+        <span nz-icon nzType="bell" nzTheme="fill"></span>
+      </li>
+      <li nz-menu-item>
+        <span class="material-symbols-outlined"> logout </span>
+      </li>
+    </div>
+  </div>
+</ul>

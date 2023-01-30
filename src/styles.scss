@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root {
+  --primary-color: #2188d9;
+  --secondary-color: #b8b9bc;
+  --success-color: #53d86a;
+  --danger-color: #ff3d00;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.page-wrapper {
+  padding: 40px;
+  h1 {
+    font-weight: 700;
+    font-size: 32px;
+  }
+}
+
+#segmented-element {
+  border-radius: 4px;
+  border: none;
+  .ant-segmented {
+    &-group {
+      height: 100%;
+      border-radius: 4px;
+    }
+    &-item {
+      display: grid;
+      place-items: center;
+      border-radius: inherit;
+      &-selected {
+        border: 2px solid var(--primary-color);
+        color: #fff;
+        background-color: var(--primary-color);
+        &:nth-child(1) {
+          border-radius: 4px 0 0 4px;
+        }
+        &:nth-child(2) {
+          border-radius: 0 4px 4px 0;
+        }
+      }
+    }
+  }
+}

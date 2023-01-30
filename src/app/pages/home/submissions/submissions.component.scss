@@ -1,0 +1,60 @@
+.input-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  height: 50px;
+  gap: 40px;
+  & > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+    &:first-child {
+      width: 75%;
+      nz-select {
+        min-width: 210px;
+        width: fit-content;
+      }
+      .date-picker {
+        padding: 4px 11px;
+        font-size: 14px;
+        line-height: 1.5;
+        color: rgba(0, 0, 0, 0.65);
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #d9d9d9;
+        border-radius: 4px;
+        transition: all 0.3s;
+        position: relative;
+        min-width: 210px;
+        width: fit-content;
+        gap: 5px;
+
+        &:active,
+        &:focus {
+          border-color: var(--primary-color);
+          box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+          outline: 0;
+        }
+
+        display: flex;
+        align-items: center;
+      }
+    }
+    &:last-child {
+    }
+    #input-group {
+      width: 35%;
+    }
+  }
+  .export {
+    color: var(--primary-color);
+    a {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+}

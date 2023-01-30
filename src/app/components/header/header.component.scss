@@ -1,0 +1,50 @@
+ul {
+  background-color: var(--primary-color);
+  width: 100%;
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 40px;
+
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      li {
+        display: flex;
+        place-items: center;
+        &:active {
+          background-color: #1773bb !important;
+        }
+        a {
+          padding: 10px 18px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+        a,
+        h1,
+        span {
+          color: #fff;
+        }
+        span {
+          font-size: 18px;
+          font-weight: 700;
+        }
+      }
+      .active {
+        background-color: #1773bb;
+        color: rgb(0, 0, 0);
+      }
+      &:last-child {
+        display: flex;
+        gap: 22px;
+        justify-content: center;
+        li {
+          padding: 0;
+        }
+      }
+    }
+  }
+}

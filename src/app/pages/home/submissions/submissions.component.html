@@ -1,0 +1,50 @@
+<div class="page-wrapper">
+  <h1>Submissions</h1>
+  <br />
+  <div class="input-options">
+    <div>
+      <div id="input-group">
+        <nz-input-group [nzPrefix]="suffixIconSearch">
+          <input type="text" nz-input placeholder="search" />
+        </nz-input-group>
+        <ng-template #suffixIconSearch>
+          <span nz-icon nzType="search"></span>
+        </ng-template>
+      </div>
+      <nz-select [(ngModel)]="selectForm">
+        <nz-option nzValue="Select Form" nzLabel="Select Form"></nz-option>
+        <nz-option nzValue="Select Form2" nzLabel="Select Form"></nz-option>
+      </nz-select>
+      <nz-select [(ngModel)]="selectStatus">
+        <nz-option nzValue="Select status" nzLabel="Select Status"></nz-option>
+        <nz-option nzValue="Select status2" nzLabel="Select Status"></nz-option>
+      </nz-select>
+      <div class="date-picker">
+        <img src="/assets/Calendar.svg" alt="" />
+        {{ date | date : "dd/MM/yyyy" }}
+      </div>
+    </div>
+    <div>
+      <nz-segmented
+        [nzOptions]="options"
+        nzSize="large"
+        id="segmented-element"
+      ></nz-segmented>
+      <div class="export">
+        <a href="#" target="_blank" rel="noreferrer">
+          <img src="/assets/Paper Download.svg" alt="" />
+          <p>Export</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div nz-row [nzGutter]="[40]">
+    <div nz-col nzXs="24" nzSm="24" nzMd="8" nzLg="8" nzXl="8">
+      <app-submission-cards-list></app-submission-cards-list>
+    </div>
+    <div nz-col nzXs="24" nzSm="24" nzMd="16" nzLg="16" nzXl="16">
+      <app-map></app-map>
+    </div>
+  </div>
+</div>
