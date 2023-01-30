@@ -1,0 +1,25 @@
+<div class="card">
+  <p>
+    <b> Work Flow: {{ submission.workFlow }} </b>
+
+    <span
+      [ngClass]="{
+        Uncomplete: submission.status === 'Uncomplete',
+        LowRisk: submission.status === 'Low Risk',
+        NeedsReview: submission.status === 'Needs Review'
+      }"
+    >
+      <div></div>
+      {{ submission.status }}
+    </span>
+  </p>
+  <p>
+    from: <span> {{ submission.from }}</span>
+  </p>
+  <p>
+    to: <span> {{ submission.to }}</span>
+  </p>
+  <p>
+    Due Date: <span> {{ submission.dueDate }}</span>
+  </p>
+</div>
