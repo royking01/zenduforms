@@ -5,8 +5,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 40px;
-
+    padding: 0px 20px 0px 0;
     & > div {
       display: flex;
       align-items: center;
@@ -14,6 +13,8 @@ ul {
       li {
         display: flex;
         place-items: center;
+        &:first-child {
+        }
         &:active {
           background-color: #1773bb !important;
         }
